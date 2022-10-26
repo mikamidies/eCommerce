@@ -2,7 +2,7 @@
   <v-app class="app">
     <v-container>
       <div class="wrapper">
-        <div class="wrap" v-if="error.statusCode === 404">
+        <div v-if="error.statusCode === 404" class="wrap">
           <h1>
             {{ pageNotFound }}
           </h1>

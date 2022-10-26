@@ -2,6 +2,9 @@
   --blue-grad: linear-gradient(to right, #8f94fb, #4e54c8);
   --blue: #4e54c8;
 }
+body {
+  font-family: 'DM Sans';
+}
 * {
   padding: 0;
   margin: 0;
@@ -77,8 +80,8 @@ h6 {
 }
 ::-webkit-scrollbar {
   width: 0.5rem;
-  background: #4e54c8;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: #4e54c8;
 }

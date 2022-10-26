@@ -16,7 +16,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: ['@/assets/css/base.css', '@sweetalert2/theme-material-ui'],
+  css: [
+    '@/assets/css/base.css',
+    '@sweetalert2/theme-material-ui',
+    'boxicons/css/boxicons.min.css',
+  ],
 
   plugins: [],
 
