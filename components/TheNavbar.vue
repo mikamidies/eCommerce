@@ -29,6 +29,11 @@ export default {
 
 <style scoped>
 .wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
   background: var(--blue);
   -webkit-box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);

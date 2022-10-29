@@ -55,7 +55,8 @@ export default {
 <style>
 .swiper-slide {
   height: 100vh;
-  background: url(@/assets/img/chae.jpg) center no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }

@@ -1,6 +1,7 @@
 <template>
   <div>
     <MainHome :sale_items="sale_items" />
+    <MainProducts :products="products" />
   </div>
 </template>
 
