@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     <v-container>
       <div class="cont">
         <div class="brand">
@@ -28,6 +28,12 @@ export default {
 </script>
 
 <style scoped>
+.wrap {
+  background: var(--blue);
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+}
 .cont {
   display: flex;
   align-items: center;
@@ -35,6 +41,14 @@ export default {
 }
 .brand a {
   font-size: 28px;
-  color: black;
+  color: white;
+}
+.btn {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: white;
+  font-size: 24px;
+  padding: 16px !important;
+  height: unset !important;
 }
 </style>
