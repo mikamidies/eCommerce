@@ -7,10 +7,14 @@
         </div>
         <div class="right">
           <v-btn class="btn">
-            <i class="bx bx-grid-alt"></i>
+            <nuxt-link to="/products">
+              <i class="bx bx-grid-alt"></i>
+            </nuxt-link>
           </v-btn>
           <v-btn class="btn">
-            <i class="bx bx-cart-alt"></i>
+            <nuxt-link to="/">
+              <i class="bx bx-cart-alt"></i>
+            </nuxt-link>
           </v-btn>
           <v-btn class="btn">
             <i class="bx bx-sun"></i>
@@ -51,9 +55,15 @@ export default {
 .btn {
   background-color: transparent !important;
   box-shadow: none !important;
-  color: white;
   font-size: 24px;
   padding: 16px !important;
   height: unset !important;
+  color: white;
+}
+.btn a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

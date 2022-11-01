@@ -55,14 +55,20 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+.prod__img {
+  overflow: hidden;
+  border-radius: 8px;
+}
 .prod__pic {
   width: 100%;
   height: 340px;
   object-fit: cover;
+  transition: 0.3s;
 }
-.min {
-  max-width: 60%;
+.card:hover .prod__pic {
+  transform: scale(1.2);
 }
+
 .prod__name {
   font-size: 20px;
   font-weight: 500;

@@ -93,3 +93,6 @@ h6 {
   padding: 16px !important;
   height: unset !important;
 }
+.min {
+  max-width: 60%;
+}
