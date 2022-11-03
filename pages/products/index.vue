@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ProductsGrid :categories="categories" />
+    <ProductsGrid :categories="categories" :products="products" />
   </div>
 </template>
 
