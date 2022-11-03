@@ -22,7 +22,7 @@ export default {
     'boxicons/css/boxicons.min.css',
   ],
 
-  plugins: [],
+  plugins: ['@/plugins/cart.js'],
 
   components: true,
 

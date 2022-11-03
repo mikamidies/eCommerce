@@ -39,7 +39,7 @@
                 </div>
                 <div class="cont">
                   <p class="prod__name">{{ p.name }}</p>
-                  <p class="prod__price">${{ p.price }}</p>
+                  <p class="prod__price">{{ $formatMoney(p.price) }}</p>
                   <div class="tags">
                     <div
                       v-for="(t, i) in p.tags"

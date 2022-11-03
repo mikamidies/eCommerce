@@ -13,7 +13,7 @@
             {{ product.name }}
           </h1>
           <div class="mt-2 text-center">
-            <p class="cost">${{ product.price }}</p>
+            <p class="cost">{{ $formatMoney(product.price) }}</p>
             <v-rating
               readonly
               half-increments
@@ -69,7 +69,7 @@ export default {
 
 <style scoped>
 .wrap {
-  padding: 100px 0 120px 0;
+  padding: 100px 120px 0;
 }
 .flex {
   display: flex;

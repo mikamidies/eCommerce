@@ -10,7 +10,7 @@
         >
           <div class="content">
             <h2 class="title">{{ p.name }}</h2>
-            <p class="price">$ {{ p.price }}</p>
+            <p class="price">{{ $formatMoney(p.price) }}</p>
             <p class="sub">
               {{ p.description }}
             </p>
