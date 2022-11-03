@@ -6,17 +6,23 @@
           <nuxt-link to="/"> eCommerce </nuxt-link>
         </div>
         <div class="right">
-          <v-btn class="btn">
-            <nuxt-link to="/products">
-              <i class="bx bx-grid-alt"></i>
-            </nuxt-link>
+          <v-btn nuxt to="/products" class="btn">
+            <i class="bx bx-grid-alt"></i>
           </v-btn>
-          <v-btn class="btn">
-            <nuxt-link to="/">
+          <v-badge
+            class="red"
+            overlap
+            :content="$store.state.cart.cart.length"
+            v-if="$store.state.cart.cart.length > 0"
+          >
+            <v-btn nuxt to="/" class="btn">
               <i class="bx bx-cart-alt"></i>
-            </nuxt-link>
+            </v-btn>
+          </v-badge>
+          <v-btn v-else nuxt to="/" class="btn">
+            <i class="bx bx-cart-alt"></i>
           </v-btn>
-          <v-btn class="btn">
+          <v-btn @click="toggleTheme" class="btn">
             <i class="bx bx-sun"></i>
           </v-btn>
         </div>
@@ -28,6 +34,13 @@
 <script>
 export default {
   name: 'TheNavbar',
+
+  methods: {
+    toggleTheme() {
+      console.log('dark')
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+    },
+  },
 }
 </script>
 
@@ -65,5 +78,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.v-badge__badge {
+  color: red !important;
 }
 </style>

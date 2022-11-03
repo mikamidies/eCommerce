@@ -1,32 +1,31 @@
 /* eslint-disable */
 export default {
   LoadCart(state) {
-    let cart = localStorage.getItem('freeCart')
+    let cart = localStorage.getItem('myCart')
     if (cart) {
       state.cart = JSON.parse(cart)
     }
   },
   AddToCart(state, product) {
-    let itemFound = state.cart.find((p) => p.product.id === product.id)
-    if (!itemFound) {
-      state.cart.push({
-        product,
-        quantity: 1,
-      })
-      if (itemFound) {
-        itemFound.quantity += 1
-      }
+    //Check if item is in cart
+    let itemfound = state.cart.find((p) => p.product.id === product.id)
+    if (!itemfound) {
+      state.cart.push({ product, quantity: 1 })
+    }
+    if (itemfound) {
+      itemfound.quantity += 1
     }
 
-    localStorage.setItem('freeCart', JSON.stringify(state.cart))
+    //Update local storage
+    localStorage.setItem('myCart', JSON.stringify(state.cart))
 
     this.$swal({
       toast: true,
-      text: 'Cart updated',
+      text: 'Cart Updated.',
       icon: 'success',
       timer: 4000,
-      timerProgressBar: 'true',
-      showConfirmButton: 'true',
+      timerProgressBar: true,
+      showConfirmButton: false,
       position: 'top-end',
     })
   },
@@ -39,7 +38,7 @@ export default {
       item.quantity -= 1
     }
 
-    localStorage.setItem('freeCart', JSON.stringify(state.cart))
+    localStorage.setItem('myCart', JSON.stringify(state.cart))
 
     this.$swal({
       toast: true,
@@ -54,7 +53,7 @@ export default {
   RemoveCartItem(state, index) {
     state.cart.splice(index, 1)
 
-    localStorage.setItem('freeCart', JSON.stringify(state.cart))
+    localStorage.setItem('myCart', JSON.stringify(state.cart))
 
     this.$swal({
       toast: true,
@@ -70,7 +69,7 @@ export default {
     let item = state.cart[index]
     item.quantity += 1
 
-    localStorage.setItem('freeCart', JSON.stringify(state.cart))
+    localStorage.setItem('myCart', JSON.stringify(state.cart))
 
     this.$swal({
       toast: true,
@@ -84,6 +83,6 @@ export default {
   },
   ClearCart(state) {
     state.cart = []
-    localStorage.removeItem('freeCart')
+    localStorage.removeItem('myCart')
   },
 }

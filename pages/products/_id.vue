@@ -42,7 +42,9 @@
               {{ product.description }}
             </p>
           </div>
-          <v-btn class="btn"> Add to card </v-btn>
+          <v-btn @click="$store.commit('cart/AddToCart', product)" class="btn">
+            Add to card
+          </v-btn>
         </div>
       </div>
     </div>
@@ -63,6 +65,9 @@ export default {
       .limit(1)
       .fetch()
     this.product = d[0]
+  },
+  mounted() {
+    console.log(this.$store.state.cart)
   },
 }
 </script>
