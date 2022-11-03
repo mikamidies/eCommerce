@@ -33,7 +33,7 @@
               :key="`product${p.id}-${i}`"
               class="card"
             >
-              <nuxt-link to="/">
+              <nuxt-link :to="`/products/${p.id}`">
                 <div class="prod__img">
                   <img :src="p.image" alt="" class="prod__pic" />
                 </div>

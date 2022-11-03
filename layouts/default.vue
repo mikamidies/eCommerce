@@ -1,7 +1,9 @@
 <template>
   <div>
     <TheNavbar />
-    <nuxt />
+    <transition name="home">
+      <nuxt />
+    </transition>
     <TheFooter />
   </div>
 </template>

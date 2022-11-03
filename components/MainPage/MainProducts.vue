@@ -4,7 +4,7 @@
       <h2 class="title">Products</h2>
       <div class="grid">
         <div v-for="(p, i) in products" :key="`product-${i}`" class="card">
-          <nuxt-link to="/">
+          <nuxt-link :to="`/products/${p.id}`">
             <div class="prod__img">
               <img :src="p.image" alt="" class="prod__pic" />
             </div>
@@ -57,7 +57,7 @@ export default {
 }
 .prod__img {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
 }
 .prod__pic {
   width: 100%;

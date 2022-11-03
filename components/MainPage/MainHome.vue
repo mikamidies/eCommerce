@@ -14,7 +14,9 @@
             <p class="sub">
               {{ p.description }}
             </p>
-            <nuxt-link class="link" to="/"> Check it out </nuxt-link>
+            <nuxt-link class="link" :to="`/products/${p.id}`">
+              Check it out
+            </nuxt-link>
           </div>
         </div>
       </div>
