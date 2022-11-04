@@ -7,7 +7,6 @@ export default {
     }
   },
   AddToCart(state, product) {
-    //Check if item is in cart
     let itemfound = state.cart.find((p) => p.product.id === product.id)
     if (!itemfound) {
       state.cart.push({ product, quantity: 1 })
@@ -16,7 +15,6 @@ export default {
       itemfound.quantity += 1
     }
 
-    //Update local storage
     localStorage.setItem('myCart', JSON.stringify(state.cart))
 
     this.$swal({

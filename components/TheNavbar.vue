@@ -43,6 +43,9 @@ export default {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
     },
   },
+  mounted() {
+    console.log(this.$store.state.cart.cart[0].quantity)
+  },
 }
 </script>
 

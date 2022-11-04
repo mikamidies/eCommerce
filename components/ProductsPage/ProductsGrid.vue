@@ -17,7 +17,7 @@
               <h4 class="cat__title">Categories</h4>
               <ul>
                 <li v-for="(c, i) in categories" :key="`category${i}`">
-                  <v-btn link class="cat">
+                  <v-btn @click="filterByCategory" link class="cat">
                     <img :src="c.image" alt="" />
                     {{ c.name }}
                   </v-btn>
