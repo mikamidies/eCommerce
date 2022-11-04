@@ -12,19 +12,21 @@
           <v-badge
             class="red"
             overlap
+            bordered
+            color="grey"
             :content="$store.state.cart.cart.length"
             v-if="$store.state.cart.cart.length > 0"
           >
-            <v-btn nuxt to="/" class="btn">
+            <v-btn nuxt to="/cart" class="btn">
               <i class="bx bx-cart-alt"></i>
             </v-btn>
           </v-badge>
-          <v-btn v-else nuxt to="/" class="btn">
+          <v-btn v-else nuxt to="/cart" class="btn">
             <i class="bx bx-cart-alt"></i>
           </v-btn>
-          <v-btn @click="toggleTheme" class="btn">
+          <!-- <v-btn @click="toggleTheme" class="btn">
             <i class="bx bx-sun"></i>
-          </v-btn>
+          </v-btn> -->
         </div>
       </div>
     </v-container>
@@ -79,7 +81,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.v-badge__badge {
+v-badge span {
   color: red !important;
 }
 </style>

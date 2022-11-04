@@ -23,7 +23,7 @@ export default {
       toast: true,
       text: 'Cart Updated.',
       icon: 'success',
-      timer: 4000,
+      timer: 1000,
       timerProgressBar: true,
       showConfirmButton: false,
       position: 'top-end',
@@ -44,10 +44,10 @@ export default {
       toast: true,
       text: 'Cart updated',
       icon: 'success',
-      timer: 4000,
+      timer: 1000,
       timerProgressBar: 'true',
-      showConfirmButton: 'true',
       position: 'top-end',
+      showConfirmButton: false,
     })
   },
   RemoveCartItem(state, index) {
@@ -59,10 +59,10 @@ export default {
       toast: true,
       text: 'Item removed',
       icon: 'success',
-      timer: 4000,
+      timer: 1000,
       timerProgressBar: 'true',
-      showConfirmButton: 'true',
       position: 'top-end',
+      showConfirmButton: false,
     })
   },
   IncreaseItemCount(state, index) {
@@ -75,10 +75,10 @@ export default {
       toast: true,
       text: 'Cart updated',
       icon: 'success',
-      timer: 4000,
+      timer: 1000,
       timerProgressBar: 'true',
-      showConfirmButton: 'true',
       position: 'top-end',
+      showConfirmButton: false,
     })
   },
   ClearCart(state) {

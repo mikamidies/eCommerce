@@ -63,7 +63,7 @@ export default {
     },
     treeShake: true,
     theme: {
-      light: true,
+      light: false,
       themes: {
         light: {
           primary: colors.deepPurple.darken1,
