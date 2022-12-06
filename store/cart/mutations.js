@@ -10,10 +10,15 @@ export default {
     let itemfound = state.cart.find((p) => p.product.id === product.id)
     if (!itemfound) {
       state.cart.push({ product, quantity: 1 })
-    }
-    if (itemfound) {
+    } else {
       itemfound.quantity += 1
     }
+
+    // let totalCount = 0
+
+    // itemfound.forEach((i) => {
+    //   totalCount += itemfound.quantity
+    // })
 
     localStorage.setItem('myCart', JSON.stringify(state.cart))
 

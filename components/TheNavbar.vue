@@ -14,7 +14,7 @@
             overlap
             bordered
             color="grey"
-            :content="$store.state.cart.cart.length"
+            :content="$store.state.cart.cart.totalCount"
             v-if="$store.state.cart.cart.length > 0"
           >
             <v-btn nuxt to="/cart" class="btn">
@@ -37,14 +37,21 @@
 export default {
   name: 'TheNavbar',
 
+  data() {
+    return {
+      // totalCount: 0,
+    }
+  },
+
+  mounted() {
+    console.log(this.$store.state.cart.cart)
+  },
+
   methods: {
     toggleTheme() {
       console.log('dark')
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
     },
-  },
-  mounted() {
-    console.log(this.$store.state.cart.cart[0].quantity)
   },
 }
 </script>
